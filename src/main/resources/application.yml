@@ -23,3 +23,7 @@ tracing:
 endpoints:
   all:
     sensitive: false
+christmas:
+  tree:
+    strips: ${LED_STRIPS:16}
+    leds-per-strip: ${LEDS_PER_STRIP:60}

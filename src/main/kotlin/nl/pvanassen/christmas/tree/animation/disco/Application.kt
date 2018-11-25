@@ -9,6 +9,7 @@ object Application {
         Micronaut.build()
                 .packages("nl.pvanassen.christmas.tree.animation.disco.animation",
                         "nl.pvanassen.christmas.tree.animation.disco.configuration",
+                        "nl.pvanassen.christmas.tree.animation.disco.model",
                         "nl.pvanassen.christmas.tree.animation.disco.controller")
                 .mainClass(Application.javaClass)
                 .start()

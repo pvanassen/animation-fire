@@ -1,8 +1,8 @@
 package nl.pvanassen.christmas.tree.animation.disco.animation
 
 import nl.pvanassen.christmas.tree.animation.disco.SimplexNoise
-import nl.pvanassen.christmas.tree.animation.disco.model.TreeModel
-import nl.pvanassen.christmas.tree.animation.disco.util.Utils
+import nl.pvanassen.christmas.tree.animation.common.model.TreeModel
+import nl.pvanassen.christmas.tree.animation.common.util.Utils
 import nl.pvanassen.christmas.tree.canvas.Canvas
 import javax.inject.Singleton
 
