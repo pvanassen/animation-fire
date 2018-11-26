@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>nl.pvanassen.christmas.tree</groupId>
-    <artifactId>christmas-tree-animation-disco</artifactId>
+    <artifactId>christmas-tree-animation-fire</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <parent>
         <groupId>nl.pvanassen</groupId>
@@ -14,7 +14,7 @@
         <micronaut.version>1.0.1</micronaut.version>
         <jdk.version>1.8</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <exec.mainClass>nl.pvanassen.christmas.tree.animation.disco.Application</exec.mainClass>
+        <exec.mainClass>nl.pvanassen.christmas.tree.animation.fire.Application</exec.mainClass>
         <kotlinVersion>1.2.61</kotlinVersion>
         <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
     </properties>
