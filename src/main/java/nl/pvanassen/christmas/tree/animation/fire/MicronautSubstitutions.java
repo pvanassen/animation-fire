@@ -1,4 +1,4 @@
-package nl.pvanassen.christmas.tree.animation.disco;
+package nl.pvanassen.christmas.tree.animation.fire;
 
 import com.oracle.svm.core.annotate.Alias;
 import com.oracle.svm.core.annotate.RecomputeFieldValue;

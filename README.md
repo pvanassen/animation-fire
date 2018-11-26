@@ -1,7 +1,6 @@
-# Christmas tree animation: Disco!
+# Christmas tree animation: Fire!
 
-A websocket server serving n seconds of disco colored leds!
-
+A websocket server serving n seconds of fire colored leds!
 
 The following environment variables can be used for configuration: 
 
@@ -15,3 +14,7 @@ For Zipkin:
 - ZIPKIN_HOST
 - ZIPKIN_PORT
 - ZIPKIN_PROBABILITY
+
+For the leds itself: 
+- LED_STRIPS
+- LEDS_PER_STRIP

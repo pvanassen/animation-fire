@@ -9,7 +9,7 @@ consul:
       tags:
       - christmas-tree
       - animation
-      - disco
+      - fire
       retry-count: 5
       fail-fast: true
     defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"

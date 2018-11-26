@@ -1,4 +1,4 @@
-package nl.pvanassen.christmas.tree.animation.disco;
+package nl.pvanassen.christmas.tree.animation.fire;
 
 import com.oracle.svm.core.annotate.AutomaticFeature;
 import io.micronaut.discovery.DiscoveryClient;
