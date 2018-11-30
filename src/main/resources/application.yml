@@ -1,6 +1,6 @@
 micronaut:
   application:
-    name: christmas-tree-animation-disco
+    name: christmas-tree-animation-fire
     id: ${random.shortuuid}
 consul:
   client:
