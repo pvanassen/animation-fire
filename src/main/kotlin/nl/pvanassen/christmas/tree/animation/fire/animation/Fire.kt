@@ -1,5 +1,6 @@
 package nl.pvanassen.christmas.tree.animation.fire.animation
 
+import nl.pvanassen.christmas.tree.animation.common.model.Animation
 import nl.pvanassen.christmas.tree.animation.common.util.CommonUtils
 import nl.pvanassen.christmas.tree.canvas.Canvas
 import java.awt.image.BufferedImage
@@ -9,7 +10,7 @@ import javax.imageio.ImageIO
 import javax.inject.Singleton
 
 @Singleton
-class Fire(private val canvas:Canvas) {
+class Fire(private val canvas:Canvas): Animation {
     private val fireImage: BufferedImage
     private var x: Int = 0
     private var y: Int = 0
@@ -23,7 +24,7 @@ class Fire(private val canvas:Canvas) {
         x = -(fireImage.width / 2)
     }
 
-    fun tick():ByteArray {
+    override fun getFrame():ByteArray {
         val moveX = CommonUtils.getRandom(SKEW * 2 + 1) - SKEW
         val moveY = CommonUtils.getRandom(SKEW * 2 + 1) - SKEW
         x += moveX
