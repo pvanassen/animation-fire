@@ -72,7 +72,7 @@ pipeline {
                 stage ('Docker latest') {
                     steps {
                         script {
-                            def image = docker.build "$DOCKER_REPO/christmas-tree-animation-fire`:latest"
+                            def image = docker.build "$DOCKER_REPO/christmas-tree-animation-fire:latest"
                             image.push()
                         }
                     }
