@@ -13,7 +13,6 @@ import javax.inject.Singleton
 class Fire(private val canvas:Canvas): Animation {
     private val fireImage: BufferedImage
     private var x: Int = 0
-    private var y: Int = 0
 
     init {
         try {
@@ -26,10 +25,10 @@ class Fire(private val canvas:Canvas): Animation {
 
     override fun getFrame(seed:Long, frame: Int, nsPerFrame: Int): ByteArray {
         val moveX = CommonUtils.getRandom(SKEW * 2 + 1) - SKEW
-        val moveY = CommonUtils.getRandom(SKEW * 2 + 1) - SKEW
         x += moveX
-        y += moveY
-        canvas.setImage(x, y, fireImage)
+        x = Math.max(0, x)
+        x = Math.min(fireImage.width - canvas.canvas.width, x)
+        canvas.setImage(x, 0, fireImage)
         return canvas.getValues()
     }
 
