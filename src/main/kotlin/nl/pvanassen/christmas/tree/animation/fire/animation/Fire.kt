@@ -17,14 +17,14 @@ class Fire(private val canvas:Canvas): Animation {
 
     init {
         try {
-            fireImage = ImageIO.read(javaClass.getResourceAsStream("/fire1.png"))
+            fireImage = ImageIO.read(javaClass.getResourceAsStream("/fire2.png"))
         } catch (e: IOException) {
             throw UncheckedIOException(e)
         }
         x = -(fireImage.width / 2)
     }
 
-    override fun getFrame():ByteArray {
+    override fun getFrame(seed:Long, frame: Int, nsPerFrame: Int): ByteArray {
         val moveX = CommonUtils.getRandom(SKEW * 2 + 1) - SKEW
         val moveY = CommonUtils.getRandom(SKEW * 2 + 1) - SKEW
         x += moveX
@@ -34,6 +34,6 @@ class Fire(private val canvas:Canvas): Animation {
     }
 
     companion object {
-        private const val SKEW = 10
+        private const val SKEW = 5
     }
 }
