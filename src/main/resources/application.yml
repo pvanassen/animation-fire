@@ -1,6 +1,6 @@
 micronaut:
   application:
-    name: christmas-tree-animation-fire
+    name: christmas-tree-animation-fire-${STAGE:debug}
     instance:
       id: ${random.shortuuid}
 consul:
