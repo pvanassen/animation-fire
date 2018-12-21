@@ -53,8 +53,9 @@ pipeline {
                 stage ('Docker snapshot') {
                     steps {
                         script {
-                            docker.build "christmas-tree-animation-fire:$BUILD_NUMBER"
-                            docker.build "christmas-tree-animation-fire:snapshot"
+                            def image = docker.build "$DOCKER_REPO/christmas-tree-animation-fire:$BUILD_NUMBER"
+                            image.push()
+                            image.push("$DOCKER_REPO/christmas-tree-animation-fire:snapshot")
                         }
                     }
                 }
