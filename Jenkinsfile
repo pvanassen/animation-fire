@@ -55,7 +55,7 @@ pipeline {
                         script {
                             def image = docker.build "$DOCKER_REPO/christmas-tree-animation-fire:$BUILD_NUMBER"
                             image.push()
-                            image.push("$DOCKER_REPO/christmas-tree-animation-fire:snapshot")
+                            image.push("snapshot")
                         }
                     }
                 }
