@@ -1,4 +1,4 @@
-FROM oracle/graalvm-ce:1.0.0-rc9
+FROM oracle/graalvm-ce:1.0.0-rc10
 EXPOSE 8080
 COPY target/christmas-tree-animation-fire-*.jar christmas-tree-animation-fire.jar
 ADD . target
