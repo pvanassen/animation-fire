@@ -4,6 +4,7 @@ COPY target/christmas-tree-animation-fire-*.jar christmas-tree-animation-fire.ja
 ADD . target
 RUN java -cp christmas-tree-animation-fire.jar io.micronaut.graal.reflect.GraalClassLoadingAnalyzer \
     && native-image --no-server \
+             --allow-incomplete-classpath \
              --class-path christmas-tree-animation-fire.jar \
              --report-unsupported-elements-at-runtime \
              -H:ReflectionConfigurationFiles=target/reflect.json \
