@@ -1,17 +1,19 @@
-package nl.pvanassen.christmas.tree.animation.fire.animation
+package nl.pvanassen.led.animation.fire
 
-import nl.pvanassen.christmas.tree.animation.common.model.Animation
-import nl.pvanassen.christmas.tree.animation.common.util.CommonUtils
+import nl.pvanassen.led.animation.common.model.Animation
+import nl.pvanassen.led.animation.common.util.CommonUtils
 import nl.pvanassen.christmas.tree.canvas.Canvas
 import java.awt.image.BufferedImage
 import java.io.IOException
 import java.io.UncheckedIOException
 import javax.imageio.ImageIO
-import javax.inject.Singleton
+import kotlin.math.max
+import kotlin.math.min
 
-@Singleton
-class Fire(private val canvas:Canvas): Animation {
+class Fire(private val canvas: Canvas) : Animation<Any> {
+
     private val fireImage: BufferedImage
+
     private var x: Int = 0
 
     init {
@@ -23,11 +25,11 @@ class Fire(private val canvas:Canvas): Animation {
         x = -(fireImage.width / 2)
     }
 
-    override fun getFrame(seed:Long, frame: Int, nsPerFrame: Int): ByteArray {
+    override fun getFrame(seed: Long, frame: Int, nsPerFrame: Int, helper: Any): ByteArray {
         val moveX = CommonUtils.getRandom(SKEW * 2 + 1) - SKEW
         x += moveX
-        x = Math.max(0, x)
-        x = Math.min(fireImage.width - canvas.canvas.width, x)
+        x = max(0, x)
+        x = min(fireImage.width - canvas.canvas.width, x)
         canvas.setImage(x, 0, fireImage)
         return canvas.getValues()
     }
