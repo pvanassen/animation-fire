@@ -1,8 +1,8 @@
 package nl.pvanassen.led.animation.fire
 
+import nl.pvanassen.led.animation.common.canvas.Canvas
 import nl.pvanassen.led.animation.common.model.Animation
 import nl.pvanassen.led.animation.common.util.CommonUtils
-import nl.pvanassen.christmas.tree.canvas.Canvas
 import java.awt.image.BufferedImage
 import java.io.IOException
 import java.io.UncheckedIOException
