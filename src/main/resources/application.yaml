@@ -1,4 +1,5 @@
 app:
   animation-factory: nl.pvanassen.led.animation.fire.FireFactory
-  strips: 16
-  leds-per-strip: 20
+  controller:
+    host: "$CONTROLLER:localhost"
+    port: "$PORT:8080"

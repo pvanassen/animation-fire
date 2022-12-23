@@ -11,8 +11,6 @@ RUN native-image -jar **-jar-with-dependencies.jar app --no-fallback -H:+ReportE
 # The deployment Image
 FROM ghcr.io/graalvm/jdk:ol9-java17-22
 
-EXPOSE 8080
-
 # Copy the native executable into the containers
 COPY --from=builder /build/app /app
 

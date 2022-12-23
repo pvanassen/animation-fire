@@ -29,7 +29,7 @@ class Fire(private val canvas: Canvas) : Animation<Any> {
         val moveX = CommonUtils.getRandom(SKEW * 2 + 1) - SKEW
         x += moveX
         x = max(0, x)
-        x = min(fireImage.width - canvas.canvas.width, x)
+        x = min(fireImage.width - canvas.getWidth(), x)
         canvas.setImage(x, 0, fireImage)
         return canvas.getValues()
     }
