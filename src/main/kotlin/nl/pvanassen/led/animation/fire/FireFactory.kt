@@ -12,5 +12,5 @@ class FireFactory : AnimationFactory<Any> {
         config: ApplicationConfig
     ) = Fire(canvas)
 
-    override fun getRegistrationInfo() = Registration("fire")
+    override fun getRegistrationInfo(config: ApplicationConfig) = Registration("fire")
 }
