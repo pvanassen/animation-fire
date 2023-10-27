@@ -25,7 +25,7 @@ class Fire(private val canvas: Canvas) : Animation<Any> {
                         .map { 0 }
                         .toMutableList()
                 }
-            palette = (0 .. 255)
+            palette = (0..255)
                 .map { it / 255f }
                 .map { Color.HSBtoRGB(it * 0.425f, 1f, min(1f, it * 150f)) }
 
@@ -48,14 +48,14 @@ class Fire(private val canvas: Canvas) : Animation<Any> {
                             + fire[(y + 2) % h][(x) % w]
                             + fire[(y + 1) % h][(x + 1) % w]
                             + fire[(y + 3) % h][(x) % w])
-                            * 64) / 257;            }
+                            * 64) / 257;
+            }
         }
         (0 until canvas.getHeight()).forEach { y ->
             (0 until canvas.getWidth()).forEach { x ->
                 try {
                     canvas.setRGB(x, y, palette[fire[y][x]])
-                }
-                catch (e: Exception) {
+                } catch (e: Exception) {
                     println("x: $x, y: $y, canvas.height: ${canvas.getHeight()}, canvas.width: ${canvas.getWidth()}, val: ${fire[y][x]}")
                     throw e
                 }
@@ -64,7 +64,4 @@ class Fire(private val canvas: Canvas) : Animation<Any> {
         return canvas.getValues()
     }
 
-    companion object {
-        private const val SKEW = 5
-    }
 }
